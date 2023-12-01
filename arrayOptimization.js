@@ -39,5 +39,15 @@ const transformData=(arg)=>{
 }, []);
 }
 
+console.log( Input1.reduce((acc, row, i) => {
+  row.forEach((item, j) => {
+    if (!acc[j]) {
+      acc[j] = [];
+    }
+    acc[j][i] = item;
+  });
+  return acc;
+}, []))
+
 console.log(transformData(Input1))
 
